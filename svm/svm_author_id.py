@@ -26,11 +26,11 @@ features_train, features_test, labels_train, labels_test = preprocess()
 
 #########################################################
 ### your code goes here ###
-def SVMFit(features_train, labels_train, features_test):
+def SVMFit(features_train, labels_train, features_test, c):
 	features_train = features_train[:len(features_train)/100] 
 	labels_train = labels_train[:len(labels_train)/100] 
 	from sklearn import svm
-	clf = svm.SVC(kernel='linear')
+	clf = svm.SVC(kernel='rbf', C = c)
 	# t0 = time()
 	clf.fit(features_train, labels_train)
 	# print "training time:", round(time()-t0, 3), "s"
@@ -40,9 +40,11 @@ def SVMFit(features_train, labels_train, features_test):
 	return pred
 
 from sklearn.metrics import accuracy_score
-pred = SVMFit(features_train, labels_train, features_test)
-accu = accuracy_score(labels_test, pred)
-#########################################################
-print accu
+for c in [10., 100., 1000., 10000.]:
+	print c
+	pred = SVMFit(features_train, labels_train, features_test, c)
+	accu = accuracy_score(labels_test, pred)
+	#########################################################
+	print accu
 
 
