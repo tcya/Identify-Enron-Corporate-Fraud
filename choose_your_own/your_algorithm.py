@@ -31,8 +31,8 @@ plt.show()
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
 from sklearn import ensemble
-# clf = ensemble.RandomForestClassifier()
-clf = ensemble.AdaBoostClassifier()
+# clf = ensemble.RandomForestClassifier(n_estimators=10)
+clf = ensemble.AdaBoostClassifier(n_estimators=1000)
 # t0 = time()
 clf.fit(features_train, labels_train)
 # print "training time:", round(time()-t0, 3), "s"
