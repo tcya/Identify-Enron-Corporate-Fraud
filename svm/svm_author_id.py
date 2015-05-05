@@ -27,6 +27,8 @@ features_train, features_test, labels_train, labels_test = preprocess()
 #########################################################
 ### your code goes here ###
 def SVMFit(features_train, labels_train, features_test):
+	features_train = features_train[:len(features_train)/100] 
+	labels_train = labels_train[:len(labels_train)/100] 
 	from sklearn import svm
 	clf = svm.SVC(kernel='linear')
 	# t0 = time()
