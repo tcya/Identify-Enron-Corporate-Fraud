@@ -15,10 +15,6 @@ data = featureFormat(data_dict, features)
 
 
 ### your code below
-
-
-
-### Plot the data
 for point in data:
     salary = point[0]
     bonus = point[1]
