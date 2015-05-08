@@ -37,8 +37,9 @@ test_color = "r"
 ### your regression goes here!
 ### please name it reg, so that the plotting code below picks it up and 
 ### plots it correctly
-
-
+from sklearn import linear_model
+reg = linear_model.LinearRegression()
+reg.fit(feature_train, target_train)
 
 
 
