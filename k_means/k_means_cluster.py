@@ -89,3 +89,9 @@ print max([data_dict[i]['exercised_stock_options'] for i in data_dict if data_di
 print min([data_dict[i]['exercised_stock_options'] for i in data_dict])
 print max([data_dict[i]['salary'] for i in data_dict if data_dict[i]['salary'] != 'NaN'])
 print min([data_dict[i]['salary'] for i in data_dict])
+
+##Feature scale
+from sklearn import preprocessing
+min_max_scaler = preprocessing.MinMaxScaler()
+X_train_minmax = min_max_scaler.fit_transform(numpy.array(data))
+print min_max_scaler.transform(numpy.array([0., 200000., 1000000., 0.]))
