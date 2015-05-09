@@ -84,6 +84,8 @@ except NameError:
     print "no predictions object named pred found, no clusters to plot"
 
 
-
-
-
+###Get max and min of
+print max([data_dict[i]['exercised_stock_options'] for i in data_dict if data_dict[i]['exercised_stock_options'] != 'NaN'])
+print min([data_dict[i]['exercised_stock_options'] for i in data_dict])
+print max([data_dict[i]['salary'] for i in data_dict if data_dict[i]['salary'] != 'NaN'])
+print min([data_dict[i]['salary'] for i in data_dict])
