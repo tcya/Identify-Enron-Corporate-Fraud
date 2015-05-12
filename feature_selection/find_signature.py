@@ -46,11 +46,12 @@ pred = clf.predict(features_test)
 
 from sklearn.metrics import accuracy_score
 accu = accuracy_score(labels_test, pred)
-print accu
+print 'accuracy = ', accu
 
 print max(clf.feature_importances_)
 # print clf.feature_importances_.tolist().index(max(clf.feature_importances_))
 #or
 imax = numpy.where(clf.feature_importances_ == max(clf.feature_importances_))
+print clf.feature_importances_[clf.feature_importances_ > 0.2]
 
 print vectorizer.get_feature_names()[imax[0]]
