@@ -47,3 +47,8 @@ pred = clf.predict(features_test)
 from sklearn.metrics import accuracy_score
 accu = accuracy_score(labels_test, pred)
 print accu
+
+print max(clf.feature_importances_)
+print clf.feature_importances_.tolist().index(max(clf.feature_importances_))
+#or
+print numpy.where(clf.feature_importances_ == max(clf.feature_importances_))
