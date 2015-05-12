@@ -7,7 +7,7 @@ numpy.random.seed(42)
 
 ### the words (features) and authors (labels), already largely processed
 ### these files should have been created from the previous (Lesson 10) mini-project.
-words_file = "../text_learning/your_word_data.pkl" 
+words_file = "../text_learning/your_word_data.pkl"
 authors_file = "../text_learning/your_email_authors.pkl"
 word_data = pickle.load( open(words_file, "r"))
 authors = pickle.load( open(authors_file, "r") )
@@ -36,6 +36,14 @@ labels_train   = labels_train[:150]
 
 
 ### your code goes here
+from sklearn import tree
+clf = tree.DecisionTreeClassifier()
+# t0 = time()
+clf.fit(features_train, labels_train)
+# print "training time:", round(time()-t0, 3), "s"
+# t0 = time()
+pred = clf.predict(features_test)
 
-
-
+from sklearn.metrics import accuracy_score
+accu = accuracy_score(labels_test, pred)
+print accu
