@@ -49,6 +49,8 @@ accu = accuracy_score(labels_test, pred)
 print accu
 
 print max(clf.feature_importances_)
-print clf.feature_importances_.tolist().index(max(clf.feature_importances_))
+# print clf.feature_importances_.tolist().index(max(clf.feature_importances_))
 #or
 print numpy.where(clf.feature_importances_ == max(clf.feature_importances_))
+
+print vectorizer.get_feature_names()[33614]
