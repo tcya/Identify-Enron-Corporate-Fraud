@@ -14,9 +14,9 @@ authors = pickle.load( open(authors_file, "r") )
 
 
 
-### test_size is the percentage of events assigned to the test set (remainder go into training)
-### feature matrices changed to dense representations for compatibility with classifier
-### functions in versions 0.15.2 and earlier
+## test_size is the percentage of events assigned to the test set (remainder go into training)
+## feature matrices changed to dense representations for compatibility with classifier
+## functions in versions 0.15.2 and earlier
 from sklearn import cross_validation
 features_train, features_test, labels_train, labels_test = cross_validation.train_test_split(word_data, authors, test_size=0.1, random_state=42)
 
@@ -51,6 +51,6 @@ print accu
 print max(clf.feature_importances_)
 # print clf.feature_importances_.tolist().index(max(clf.feature_importances_))
 #or
-print numpy.where(clf.feature_importances_ == max(clf.feature_importances_))
+imax = numpy.where(clf.feature_importances_ == max(clf.feature_importances_))
 
-print vectorizer.get_feature_names()[33614]
+print vectorizer.get_feature_names()[imax[0]]
