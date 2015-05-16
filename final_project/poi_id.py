@@ -37,14 +37,17 @@ features_list = ['poi','salary'] # You will need to use more features
 
 ### Load the dictionary containing the dataset
 data_dict = pickle.load(open("final_project_dataset.pkl", "r") )
-
+for person in data_dict.keys():
+    data_dict[person]['fraction_from_poi'] = float(data_dict[person]['from_poi_to_this_person'])/float(data_dict[person]['to_messages'])
+    data_dict[person]['fraction_to_poi'] = float(data_dict[person]['from_this_person_to_poi'])/float(data_dict[person]['from_messages'])
 ### Task 2: Remove outliers
 del data_dict['TOTAL']
+
 ### Task 3: Create new feature(s)
 ### Store to my_dataset for easy export below.
 my_dataset = data_dict
-
-Draw(my_dataset, features_list, 1, 1)
+# print my_dataset['CAUSEY RICHARD A']
+# Draw(my_dataset, features_list, 1, 1)
 ### Extract features and labels from dataset for local testing
 data = featureFormat(my_dataset, features_list, sort_keys = True)
 labels, features = targetFeatureSplit(data)
