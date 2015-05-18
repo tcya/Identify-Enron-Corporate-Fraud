@@ -48,7 +48,7 @@ labels, features = targetFeatureSplit(data)
 # from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import SelectKBest
 from sklearn import tree
-
+clf = tree.DecisionTreeClassifier(min_samples_split=3)
 ##Finding the best features giving highest f1 score
 # for ii in range(1,len(features_list)):
 #     selection = SelectKBest(k=ii)
@@ -62,12 +62,12 @@ from sklearn import tree
 ### Because of the small size of the dataset, the script uses stratified
 ### shuffle split cross validation. For more info:
 ### http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedShuffleSplit.html
-for ii in range(2,8):
-    print 'min_samples_split: ', ii
-    clf = tree.DecisionTreeClassifier(min_samples_split=ii)
-    test_classifier(clf, my_dataset, features_list)
+# for ii in range(2,8):
+#     print 'min_samples_split: ', ii
+#     clf = tree.DecisionTreeClassifier(min_samples_split=ii)
+#     test_classifier(clf, my_dataset, features_list)
 
-
+test_classifier(clf, my_dataset, features_list)
 ### Dump your classifier, dataset, and features_list so
 ### anyone can run/check your results.
 
