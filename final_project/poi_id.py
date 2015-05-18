@@ -43,18 +43,14 @@ for key in my_dataset.keys():
 ### Extract features and labels from dataset for local testing
 data = featureFormat(my_dataset, features_list, sort_keys = True)
 labels, features = targetFeatureSplit(data)
-print np.array(labels).shape
 features = preprocessing.scale(features)
 keys = sorted(my_dataset.keys())
-print keys[0]
-print features[0]
-for idx, key in enumerate(keys):
-    print idx,key, len(features), len(keys)
-    for ii, feat in enumerate(features_list[1:]):
-        print [my_dataset[key][i] for i in features_list[1:]]
-        # if [my_dataset[key][i] for i in features_list[1:]] != [0]*(len(features_list)-1)
-        #     my_dataset[key][feat] = features[idx][ii]
-print my_dataset[keys[0]]
+idx = 0
+for key in keys:
+    if [my_dataset[key][i] for i in features_list[1:]] != [0]*(len(features_list)-1):
+        for ii, feat in enumerate(features_list[1:]):
+            my_dataset[key][feat] = features[idx][ii]
+        idx += 1
 
 ### Task 4: Try a varity of classifiers
 ### Please name your classifier clf for easy export below.
