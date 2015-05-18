@@ -19,7 +19,7 @@ features_email = ['to_messages', 'from_poi_to_this_person', 'from_messages', 'fr
 'fraction_from_poi', 'fraction_from_poi','email_address']
 # features_list = ['poi','salary'] # You will need to use more features
 features_list = ['poi'] + features_financial + features_email[:-1]
-# features_list = ['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options']
+features_list = ['poi', 'salary', 'bonus', 'deferred_income']
 ### Load the dictionary containing the dataset
 data_dict = pickle.load(open("final_project_dataset.pkl", "r") )
 for person in data_dict.keys():
@@ -34,12 +34,27 @@ del data_dict['TOTAL']
 ### Task 3: Create new feature(s)
 ### Store to my_dataset for easy export below.
 my_dataset = data_dict
+for key in my_dataset.keys():
+    for feat in my_dataset[key].keys():
+        if my_dataset[key][feat] == 'NaN':
+            my_dataset[key][feat] = 0
 # print my_dataset['CAUSEY RICHARD A']
 # Draw(my_dataset, features_list, 1, 1)
 ### Extract features and labels from dataset for local testing
 data = featureFormat(my_dataset, features_list, sort_keys = True)
 labels, features = targetFeatureSplit(data)
+print np.array(labels).shape
 features = preprocessing.scale(features)
+keys = sorted(my_dataset.keys())
+print keys[0]
+print features[0]
+for idx, key in enumerate(keys):
+    print idx,key, len(features), len(keys)
+    for ii, feat in enumerate(features_list[1:]):
+        print [my_dataset[key][i] for i in features_list[1:]]
+        # if [my_dataset[key][i] for i in features_list[1:]] != [0]*(len(features_list)-1)
+        #     my_dataset[key][feat] = features[idx][ii]
+print my_dataset[keys[0]]
 
 ### Task 4: Try a varity of classifiers
 ### Please name your classifier clf for easy export below.
