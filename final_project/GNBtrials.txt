@@ -1,0 +1,104 @@
+['poi', 'exercised_stock_options']
+GaussianNB()
+    Accuracy: 0.83418   Precision: 0.60329  Recall: 0.25700 F1: 0.36045 F2: 0.29033
+    Total predictions: 11000    True positives:  514    False positives:  338   False negatives: 1486   True negatives: 8662
+
+['poi', 'total_stock_value', 'exercised_stock_options']
+GaussianNB()
+    Accuracy: 0.84069   Precision: 0.46889  Recall: 0.26750 F1: 0.34066 F2: 0.29264
+    Total predictions: 13000    True positives:  535    False positives:  606   False negatives: 1465   True negatives: 10394
+
+['poi', 'bonus', 'total_stock_value', 'exercised_stock_options']
+GaussianNB()
+    Accuracy: 0.84300   Precision: 0.48581  Recall: 0.35100 F1: 0.40755 F2: 0.37163
+    Total predictions: 13000    True positives:  702    False positives:  743   False negatives: 1298   True negatives: 10257
+
+['poi', 'salary', 'bonus', 'total_stock_value', 'exercised_stock_options']
+GaussianNB()
+    Accuracy: 0.84677   Precision: 0.50312  Recall: 0.32300 F1: 0.39342 F2: 0.34791
+    Total predictions: 13000    True positives:  646    False positives:  638   False negatives: 1354   True negatives: 10362
+
+['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options']
+GaussianNB()
+    Accuracy: 0.85464   Precision: 0.48876  Recall: 0.38050 F1: 0.42789 F2: 0.39814
+    Total predictions: 14000    True positives:  761    False positives:  796   False negatives: 1239   True negatives: 11204
+
+['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive']
+GaussianNB()
+    Accuracy: 0.84714   Precision: 0.45679  Recall: 0.37000 F1: 0.40884 F2: 0.38462
+    Total predictions: 14000    True positives:  740    False positives:  880   False negatives: 1260   True negatives: 11120
+
+['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock']
+GaussianNB()
+    Accuracy: 0.84671   Precision: 0.45660  Recall: 0.38400 F1: 0.41716 F2: 0.39661
+    Total predictions: 14000    True positives:  768    False positives:  914   False negatives: 1232   True negatives: 11086
+
+['poi', 'salary', 'total_payments', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock']
+GaussianNB()
+    Accuracy: 0.84667   Precision: 0.40446  Recall: 0.31750 F1: 0.35574 F2: 0.33177
+    Total predictions: 15000    True positives:  635    False positives:  935   False negatives: 1365   True negatives: 12065
+
+['poi', 'salary', 'total_payments', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'shared_receipt_with_poi']
+GaussianNB()
+    Accuracy: 0.84173   Precision: 0.38528  Recall: 0.31400 F1: 0.34601 F2: 0.32606
+    Total predictions: 15000    True positives:  628    False positives: 1002   False negatives: 1372   True negatives: 11998
+
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'shared_receipt_with_poi']
+GaussianNB()
+    Accuracy: 0.77793   Precision: 0.24473  Recall: 0.31900 F1: 0.27697 F2: 0.30074
+    Total predictions: 15000    True positives:  638    False positives: 1969   False negatives: 1362   True negatives: 11031
+
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'shared_receipt_with_poi']
+GaussianNB()
+    Accuracy: 0.77807   Precision: 0.24472  Recall: 0.31850 F1: 0.27678 F2: 0.30039
+    Total predictions: 15000    True positives:  637    False positives: 1966   False negatives: 1363   True negatives: 11034
+
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'shared_receipt_with_poi']
+GaussianNB()
+    Accuracy: 0.77780   Precision: 0.24454  Recall: 0.31900 F1: 0.27685 F2: 0.30069
+    Total predictions: 15000    True positives:  638    False positives: 1971   False negatives: 1362   True negatives: 11029
+
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'shared_receipt_with_poi']
+GaussianNB()
+    Accuracy: 0.77407   Precision: 0.23743  Recall: 0.31400 F1: 0.27040 F2: 0.29497
+    Total predictions: 15000    True positives:  628    False positives: 2017   False negatives: 1372   True negatives: 10983
+
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'shared_receipt_with_poi', 'fraction_from_poi']
+GaussianNB()
+    Accuracy: 0.77393   Precision: 0.23705  Recall: 0.31350 F1: 0.26997 F2: 0.29450
+    Total predictions: 15000    True positives:  627    False positives: 2018   False negatives: 1373   True negatives: 10982
+
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+GaussianNB()
+    Accuracy: 0.77333   Precision: 0.23664  Recall: 0.31450 F1: 0.27007 F2: 0.29508
+    Total predictions: 15000    True positives:  629    False positives: 2029   False negatives: 1371   True negatives: 10971
+
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+GaussianNB()
+    Accuracy: 0.76693   Precision: 0.22601  Recall: 0.30850 F1: 0.26089 F2: 0.28751
+    Total predictions: 15000    True positives:  617    False positives: 2113   False negatives: 1383   True negatives: 10887
+
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+GaussianNB()
+    Accuracy: 0.36240   Precision: 0.15111  Recall: 0.81900 F1: 0.25514 F2: 0.43471
+    Total predictions: 15000    True positives: 1638    False positives: 9202   False negatives:  362   True negatives: 3798
+
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+GaussianNB()
+    Accuracy: 0.37893   Precision: 0.15432  Recall: 0.81650 F1: 0.25958 F2: 0.43940
+    Total predictions: 15000    True positives: 1633    False positives: 8949   False negatives:  367   True negatives: 4051
+
+['poi', 'salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+GaussianNB()
+    Accuracy: 0.35293   Precision: 0.14251  Recall: 0.76800 F1: 0.24041 F2: 0.40899
+    Total predictions: 15000    True positives: 1536    False positives: 9242   False negatives:  464   True negatives: 3758
+
+['poi', 'salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_messages', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+GaussianNB()
+    Accuracy: 0.31880   Precision: 0.13701  Recall: 0.77550 F1: 0.23288 F2: 0.40140
+    Total predictions: 15000    True positives: 1551    False positives: 9769   False negatives:  449   True negatives: 3231
+
+['poi', 'salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'restricted_stock_deferred', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_messages', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+GaussianNB()
+    Accuracy: 0.33680   Precision: 0.14875  Recall: 0.84150 F1: 0.25282 F2: 0.43569
+    Total predictions: 15000    True positives: 1683    False positives: 9631   False negatives:  317   True negatives: 3369
