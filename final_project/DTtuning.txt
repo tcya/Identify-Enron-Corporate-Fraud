@@ -1,0 +1,47 @@
+min_samples_split:  2
+DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            random_state=None, splitter='best')
+    Accuracy: 0.80231   Precision: 0.36544  Recall: 0.38700 F1: 0.37591 F2: 0.38249
+    Total predictions: 13000    True positives:  774    False positives: 1344   False negatives: 1226   True negatives: 9656
+
+min_samples_split:  3
+DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
+            random_state=None, splitter='best')
+    Accuracy: 0.81269   Precision: 0.38595  Recall: 0.36800 F1: 0.37676 F2: 0.37145
+    Total predictions: 13000    True positives:  736    False positives: 1171   False negatives: 1264   True negatives: 9829
+
+min_samples_split:  4
+DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
+            min_samples_split=4, min_weight_fraction_leaf=0.0,
+            random_state=None, splitter='best')
+    Accuracy: 0.80846   Precision: 0.36926  Recall: 0.34600 F1: 0.35725 F2: 0.35042
+    Total predictions: 13000    True positives:  692    False positives: 1182   False negatives: 1308   True negatives: 9818
+
+min_samples_split:  5
+DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
+            min_samples_split=5, min_weight_fraction_leaf=0.0,
+            random_state=None, splitter='best')
+    Accuracy: 0.80669   Precision: 0.35566  Recall: 0.31600 F1: 0.33466 F2: 0.32321
+    Total predictions: 13000    True positives:  632    False positives: 1145   False negatives: 1368   True negatives: 9855
+
+min_samples_split:  6
+DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
+            min_samples_split=6, min_weight_fraction_leaf=0.0,
+            random_state=None, splitter='best')
+    Accuracy: 0.80854   Precision: 0.36037  Recall: 0.31550 F1: 0.33644 F2: 0.32356
+    Total predictions: 13000    True positives:  631    False positives: 1120   False negatives: 1369   True negatives: 9880
+
+min_samples_split:  7
+DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
+            min_samples_split=7, min_weight_fraction_leaf=0.0,
+            random_state=None, splitter='best')
+    Accuracy: 0.80977   Precision: 0.36585  Recall: 0.32250 F1: 0.34281 F2: 0.33033
+    Total predictions: 13000    True positives:  645    False positives: 1118   False negatives: 1355   True negatives: 9882
