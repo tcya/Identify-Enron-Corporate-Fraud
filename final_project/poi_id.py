@@ -60,8 +60,8 @@ for key in keys:
 
 # from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import SelectKBest
-from sklearn.naive_bayes import GaussianNB
-clf = GaussianNB()    # Provided to give you a starting point. Try a varity of classifiers.
+from sklearn.cluster import KMeans
+clf = KMeans(n_clusters=5)    # Provided to give you a starting point. Try a varity of classifiers.
 
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall
 ### using our testing script.
