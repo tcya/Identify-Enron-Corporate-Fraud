@@ -1,4 +1,4 @@
-ud120-projects
+ud120-project_4: Study Enron emails by machine learning
 ==============
 
-Starter project code for students taking Udacity ud120
+The final codes and report of identifying the people of interest in Enron emails are in final_project folder. For details, please refer to the project_report.pdf there.
