@@ -1,167 +1,167 @@
 ['poi', 'exercised_stock_options']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.84600   Precision: 0.57727  Recall: 0.57150 F1: 0.57437 F2: 0.57265
-    Total predictions: 11000    True positives: 1143    False positives:  837   False negatives:  857   True negatives: 8163
+    Accuracy: 0.84900   Precision: 0.58706  Recall: 0.57150 F1: 0.57917 F2: 0.57455
+    Total predictions: 11000    True positives: 1143    False positives:  804   False negatives:  857   True negatives: 8196
 
 ['poi', 'total_stock_value', 'exercised_stock_options']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.76754   Precision: 0.21768  Recall: 0.19700 F1: 0.20682 F2: 0.20082
-    Total predictions: 13000    True positives:  394    False positives: 1416   False negatives: 1606   True negatives: 9584
+    Accuracy: 0.77646   Precision: 0.22971  Recall: 0.19250 F1: 0.20947 F2: 0.19895
+    Total predictions: 13000    True positives:  385    False positives: 1291   False negatives: 1615   True negatives: 9709
 
 ['poi', 'bonus', 'total_stock_value', 'exercised_stock_options']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.80131   Precision: 0.36334  Recall: 0.38750 F1: 0.37503 F2: 0.38241
-    Total predictions: 13000    True positives:  775    False positives: 1358   False negatives: 1225   True negatives: 9642
+    Accuracy: 0.81231   Precision: 0.38530  Recall: 0.36950 F1: 0.37723 F2: 0.37255
+    Total predictions: 13000    True positives:  739    False positives: 1179   False negatives: 1261   True negatives: 9821
 
 ['poi', 'salary', 'bonus', 'total_stock_value', 'exercised_stock_options']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.78815   Precision: 0.31892  Recall: 0.33200 F1: 0.32533 F2: 0.32930
-    Total predictions: 13000    True positives:  664    False positives: 1418   False negatives: 1336   True negatives: 9582
+    Accuracy: 0.79723   Precision: 0.32774  Recall: 0.30250 F1: 0.31461 F2: 0.30723
+    Total predictions: 13000    True positives:  605    False positives: 1241   False negatives: 1395   True negatives: 9759
 
-['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options']
+['poi', 'salary', 'bonus', 'total_stock_value', 'exercised_stock_options', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.79736   Precision: 0.28593  Recall: 0.27950 F1: 0.28268 F2: 0.28076
-    Total predictions: 14000    True positives:  559    False positives: 1396   False negatives: 1441   True negatives: 10604
+    Accuracy: 0.79643   Precision: 0.29064  Recall: 0.29500 F1: 0.29280 F2: 0.29412
+    Total predictions: 14000    True positives:  590    False positives: 1440   False negatives: 1410   True negatives: 10560
 
-['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive']
+['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.79221   Precision: 0.26894  Recall: 0.26450 F1: 0.26670 F2: 0.26538
-    Total predictions: 14000    True positives:  529    False positives: 1438   False negatives: 1471   True negatives: 10562
+    Accuracy: 0.80329   Precision: 0.28158  Recall: 0.24300 F1: 0.26087 F2: 0.24985
+    Total predictions: 14000    True positives:  486    False positives: 1240   False negatives: 1514   True negatives: 10760
 
-['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock']
+['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.78850   Precision: 0.25422  Recall: 0.24850 F1: 0.25133 F2: 0.24962
-    Total predictions: 14000    True positives:  497    False positives: 1458   False negatives: 1503   True negatives: 10542
+    Accuracy: 0.80943   Precision: 0.30559  Recall: 0.26250 F1: 0.28241 F2: 0.27012
+    Total predictions: 14000    True positives:  525    False positives: 1193   False negatives: 1475   True negatives: 10807
 
-['poi', 'salary', 'total_payments', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock']
+['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.80553   Precision: 0.27425  Recall: 0.27850 F1: 0.27636 F2: 0.27764
-    Total predictions: 15000    True positives:  557    False positives: 1474   False negatives: 1443   True negatives: 11526
+    Accuracy: 0.79879   Precision: 0.27115  Recall: 0.24200 F1: 0.25575 F2: 0.24732
+    Total predictions: 14000    True positives:  484    False positives: 1301   False negatives: 1516   True negatives: 10699
 
-['poi', 'salary', 'total_payments', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'shared_receipt_with_poi']
+['poi', 'salary', 'total_payments', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.81327   Precision: 0.29884  Recall: 0.29750 F1: 0.29817 F2: 0.29777
-    Total predictions: 15000    True positives:  595    False positives: 1396   False negatives: 1405   True negatives: 11604
+    Accuracy: 0.81327   Precision: 0.28548  Recall: 0.26650 F1: 0.27567 F2: 0.27009
+    Total predictions: 15000    True positives:  533    False positives: 1334   False negatives: 1467   True negatives: 11666
 
-['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'shared_receipt_with_poi']
+['poi', 'salary', 'total_payments', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'shared_receipt_with_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.81467   Precision: 0.30597  Recall: 0.30750 F1: 0.30673 F2: 0.30719
-    Total predictions: 15000    True positives:  615    False positives: 1395   False negatives: 1385   True negatives: 11605
+    Accuracy: 0.83153   Precision: 0.35088  Recall: 0.31000 F1: 0.32917 F2: 0.31740
+    Total predictions: 15000    True positives:  620    False positives: 1147   False negatives: 1380   True negatives: 11853
 
-['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'shared_receipt_with_poi']
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'shared_receipt_with_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.80573   Precision: 0.27465  Recall: 0.27850 F1: 0.27656 F2: 0.27772
-    Total predictions: 15000    True positives:  557    False positives: 1471   False negatives: 1443   True negatives: 11529
+    Accuracy: 0.82987   Precision: 0.34371  Recall: 0.30350 F1: 0.32236 F2: 0.31077
+    Total predictions: 15000    True positives:  607    False positives: 1159   False negatives: 1393   True negatives: 11841
 
-['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'shared_receipt_with_poi']
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'shared_receipt_with_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.80660   Precision: 0.28289  Recall: 0.29350 F1: 0.28810 F2: 0.29132
-    Total predictions: 15000    True positives:  587    False positives: 1488   False negatives: 1413   True negatives: 11512
+    Accuracy: 0.82780   Precision: 0.32741  Recall: 0.27650 F1: 0.29981 F2: 0.28538
+    Total predictions: 15000    True positives:  553    False positives: 1136   False negatives: 1447   True negatives: 11864
 
-['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'shared_receipt_with_poi']
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'shared_receipt_with_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.80007   Precision: 0.24658  Recall: 0.24300 F1: 0.24477 F2: 0.24371
-    Total predictions: 15000    True positives:  486    False positives: 1485   False negatives: 1514   True negatives: 11515
+    Accuracy: 0.82220   Precision: 0.30599  Recall: 0.26300 F1: 0.28287 F2: 0.27060
+    Total predictions: 15000    True positives:  526    False positives: 1193   False negatives: 1474   True negatives: 11807
 
-['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'shared_receipt_with_poi', 'fraction_from_poi']
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'shared_receipt_with_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.79600   Precision: 0.23313  Recall: 0.23150 F1: 0.23231 F2: 0.23182
-    Total predictions: 15000    True positives:  463    False positives: 1523   False negatives: 1537   True negatives: 11477
+    Accuracy: 0.83100   Precision: 0.34547  Recall: 0.29900 F1: 0.32056 F2: 0.30727
+    Total predictions: 15000    True positives:  598    False positives: 1133   False negatives: 1402   True negatives: 11867
 
-['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.79740   Precision: 0.23776  Recall: 0.23550 F1: 0.23662 F2: 0.23595
-    Total predictions: 15000    True positives:  471    False positives: 1510   False negatives: 1529   True negatives: 11490
+    Accuracy: 0.82747   Precision: 0.33465  Recall: 0.29750 F1: 0.31498 F2: 0.30425
+    Total predictions: 15000    True positives:  595    False positives: 1183   False negatives: 1405   True negatives: 11817
 
-['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.79367   Precision: 0.21851  Recall: 0.21250 F1: 0.21546 F2: 0.21368
-    Total predictions: 15000    True positives:  425    False positives: 1520   False negatives: 1575   True negatives: 11480
+    Accuracy: 0.82767   Precision: 0.33352  Recall: 0.29300 F1: 0.31195 F2: 0.30030
+    Total predictions: 15000    True positives:  586    False positives: 1171   False negatives: 1414   True negatives: 11829
 
-['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.79373   Precision: 0.22149  Recall: 0.21750 F1: 0.21948 F2: 0.21829
-    Total predictions: 15000    True positives:  435    False positives: 1529   False negatives: 1565   True negatives: 11471
+    Accuracy: 0.82860   Precision: 0.33564  Recall: 0.29150 F1: 0.31201 F2: 0.29937
+    Total predictions: 15000    True positives:  583    False positives: 1154   False negatives: 1417   True negatives: 11846
 
-['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+['poi', 'salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.79400   Precision: 0.22251  Recall: 0.21850 F1: 0.22048 F2: 0.21929
-    Total predictions: 15000    True positives:  437    False positives: 1527   False negatives: 1563   True negatives: 11473
+    Accuracy: 0.82707   Precision: 0.32911  Recall: 0.28600 F1: 0.30605 F2: 0.29369
+    Total predictions: 15000    True positives:  572    False positives: 1166   False negatives: 1428   True negatives: 11834
 
-['poi', 'salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+['poi', 'salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.79353   Precision: 0.22200  Recall: 0.21900 F1: 0.22049 F2: 0.21959
-    Total predictions: 15000    True positives:  438    False positives: 1535   False negatives: 1562   True negatives: 11465
+    Accuracy: 0.82887   Precision: 0.33735  Recall: 0.29400 F1: 0.31419 F2: 0.30176
+    Total predictions: 15000    True positives:  588    False positives: 1155   False negatives: 1412   True negatives: 11845
 
-['poi', 'salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_messages', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+['poi', 'salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_messages', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.79733   Precision: 0.22718  Recall: 0.21650 F1: 0.22171 F2: 0.21855
-    Total predictions: 15000    True positives:  433    False positives: 1473   False negatives: 1567   True negatives: 11527
+    Accuracy: 0.82860   Precision: 0.33430  Recall: 0.28800 F1: 0.30943 F2: 0.29620
+    Total predictions: 15000    True positives:  576    False positives: 1147   False negatives: 1424   True negatives: 11853
 
-['poi', 'salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'restricted_stock_deferred', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_messages', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_from_poi']
+['poi', 'salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'restricted_stock_deferred', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees', 'to_messages', 'from_poi_to_this_person', 'from_messages', 'from_this_person_to_poi', 'shared_receipt_with_poi', 'fraction_from_poi', 'fraction_to_poi']
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.79433   Precision: 0.22392  Recall: 0.22000 F1: 0.22194 F2: 0.22077
-    Total predictions: 15000    True positives:  440    False positives: 1525   False negatives: 1560   True negatives: 11475
+    Accuracy: 0.82633   Precision: 0.32744  Recall: 0.28700 F1: 0.30589 F2: 0.29427
+    Total predictions: 15000    True positives:  574    False positives: 1179   False negatives: 1426   True negatives: 11821
