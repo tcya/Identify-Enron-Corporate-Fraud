@@ -69,4 +69,6 @@ docs/_build/
 
 # PyBuilder
 target/
-*.pdf
+*.aux
+*.fdb_latexmk
+*.gz
