@@ -62,12 +62,12 @@ clf = tree.DecisionTreeClassifier(min_samples_split=3)
 ### Because of the small size of the dataset, the script uses stratified
 ### shuffle split cross validation. For more info:
 ### http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedShuffleSplit.html
-for ii in range(2,8):
-    print 'min_samples_split: ', ii
-    clf = tree.DecisionTreeClassifier(min_samples_split=ii)
-    test_classifier(clf, my_dataset, features_list)
+# for ii in range(2,8):
+#     print 'min_samples_split: ', ii
+#     clf = tree.DecisionTreeClassifier(min_samples_split=ii)
+#     test_classifier(clf, my_dataset, features_list)
 
-# test_classifier(clf, my_dataset, features_list)
+test_classifier(clf, my_dataset, features_list)
 ### Dump your classifier, dataset, and features_list so
 ### anyone can run/check your results.
 
