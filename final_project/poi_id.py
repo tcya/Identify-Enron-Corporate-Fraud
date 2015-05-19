@@ -68,6 +68,8 @@ clf = tree.DecisionTreeClassifier(min_samples_split=3)
 #     test_classifier(clf, my_dataset, features_list)
 
 test_classifier(clf, my_dataset, features_list)
+print 'features: ', features_list[1:]
+print 'feature importances: ', clf.feature_importances_
 ### Dump your classifier, dataset, and features_list so
 ### anyone can run/check your results.
 
