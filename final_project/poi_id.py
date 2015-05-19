@@ -18,7 +18,7 @@ features_email = ['to_messages', 'from_poi_to_this_person', 'from_messages', 'fr
 'fraction_from_poi', 'fraction_to_poi','email_address']
 # features_list = ['poi','salary'] # You will need to use more features
 features_list = ['poi'] + features_financial + features_email[:-1]
-# features_list = ['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options']
+features_list = ['poi', 'bonus', 'total_stock_value', 'exercised_stock_options']
 ### Load the dictionary containing the dataset
 data_dict = pickle.load(open("final_project_dataset.pkl", "r") )
 for person in data_dict.keys():
@@ -57,16 +57,16 @@ clf = GaussianNB()    # Provided to give you a starting point. Try a varity of c
 ### http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedShuffleSplit.html
 
 ##Finding the best features giving highest f1 score
-for ii in range(1,len(features_list)):
-    selection = SelectKBest(k=ii)
-    features_new = selection.fit_transform(features, labels)
-    features_list_new = ['poi'] + [features_list[1:][i] for i in np.where(selection.get_support()==True)[0]]
-    print features_list_new
+# for ii in range(1,len(features_list)):
+#     selection = SelectKBest(k=ii)
+#     features_new = selection.fit_transform(features, labels)
+#     features_list_new = ['poi'] + [features_list[1:][i] for i in np.where(selection.get_support()==True)[0]]
+#     print features_list_new
 
-    test_classifier(clf, my_dataset, features_list_new)
+#     test_classifier(clf, my_dataset, features_list_new)
 
 
-# test_classifier(clf, my_dataset, features_list)
+test_classifier(clf, my_dataset, features_list)
 ### Dump your classifier, dataset, and features_list so
 ### anyone can run/check your results.
 
