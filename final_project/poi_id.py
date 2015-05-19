@@ -83,7 +83,7 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.cluster import KMeans
 clf = KMeans(n_clusters=5)
 pred = clf.fit_predict(features)
-# Draw(pred, features, labels, mark_poi=True, name="clusters_after_scaling.pdf", f1_name='salary', f2_name='bonus')
+Draw(pred, features, labels, mark_poi=True, name="clusters_after_scaling.pdf", f1_name='salary', f2_name='bonus')
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall
 ### using our testing script.
 ### Because of the small size of the dataset, the script uses stratified
