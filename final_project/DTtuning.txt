@@ -3,45 +3,45 @@ DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
             min_samples_split=2, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.80231   Precision: 0.36544  Recall: 0.38700 F1: 0.37591 F2: 0.38249
-    Total predictions: 13000    True positives:  774    False positives: 1344   False negatives: 1226   True negatives: 9656
+    Accuracy: 0.80046   Precision: 0.36043  Recall: 0.38350 F1: 0.37161 F2: 0.37865
+    Total predictions: 13000    True positives:  767    False positives: 1361   False negatives: 1233   True negatives: 9639
 
 min_samples_split:  3
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
             min_samples_split=3, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.81269   Precision: 0.38595  Recall: 0.36800 F1: 0.37676 F2: 0.37145
-    Total predictions: 13000    True positives:  736    False positives: 1171   False negatives: 1264   True negatives: 9829
+    Accuracy: 0.81223   Precision: 0.38522  Recall: 0.37000 F1: 0.37745 F2: 0.37295
+    Total predictions: 13000    True positives:  740    False positives: 1181   False negatives: 1260   True negatives: 9819
 
 min_samples_split:  4
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
             min_samples_split=4, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.80846   Precision: 0.36926  Recall: 0.34600 F1: 0.35725 F2: 0.35042
-    Total predictions: 13000    True positives:  692    False positives: 1182   False negatives: 1308   True negatives: 9818
+    Accuracy: 0.80962   Precision: 0.37293  Recall: 0.34850 F1: 0.36030 F2: 0.35313
+    Total predictions: 13000    True positives:  697    False positives: 1172   False negatives: 1303   True negatives: 9828
 
 min_samples_split:  5
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
             min_samples_split=5, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.80669   Precision: 0.35566  Recall: 0.31600 F1: 0.33466 F2: 0.32321
-    Total predictions: 13000    True positives:  632    False positives: 1145   False negatives: 1368   True negatives: 9855
+    Accuracy: 0.80600   Precision: 0.35221  Recall: 0.31100 F1: 0.33032 F2: 0.31845
+    Total predictions: 13000    True positives:  622    False positives: 1144   False negatives: 1378   True negatives: 9856
 
 min_samples_split:  6
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
             min_samples_split=6, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.80854   Precision: 0.36037  Recall: 0.31550 F1: 0.33644 F2: 0.32356
-    Total predictions: 13000    True positives:  631    False positives: 1120   False negatives: 1369   True negatives: 9880
+    Accuracy: 0.80969   Precision: 0.36379  Recall: 0.31650 F1: 0.33850 F2: 0.32495
+    Total predictions: 13000    True positives:  633    False positives: 1107   False negatives: 1367   True negatives: 9893
 
 min_samples_split:  7
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
             max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
             min_samples_split=7, min_weight_fraction_leaf=0.0,
             random_state=None, splitter='best')
-    Accuracy: 0.80977   Precision: 0.36585  Recall: 0.32250 F1: 0.34281 F2: 0.33033
-    Total predictions: 13000    True positives:  645    False positives: 1118   False negatives: 1355   True negatives: 9882
+    Accuracy: 0.80915   Precision: 0.36466  Recall: 0.32400 F1: 0.34313 F2: 0.33139
+    Total predictions: 13000    True positives:  648    False positives: 1129   False negatives: 1352   True negatives: 9871
