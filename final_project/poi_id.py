@@ -3,12 +3,32 @@
 import sys
 import pickle
 sys.path.append("../tools/")
+sys.path.append("../k_means/")
 import numpy as np
 import matplotlib.pyplot as plt
 
 from feature_format import featureFormat, targetFeatureSplit
 from tester import test_classifier, dump_classifier_and_data
 from sklearn import preprocessing
+
+def Draw(pred, features, poi, mark_poi=False, name="image.png", f1_name="feature 1", f2_name="feature 2"):
+    """ some plotting code designed to help you visualize your clusters """
+
+    ### plot each cluster with a different color--add more colors for
+    ### drawing more than 4 clusters
+    colors = ["b", "c", "k", "m", "g"]
+    for ii, pp in enumerate(pred):
+        plt.scatter(features[ii][0], features[ii][1], color = colors[pred[ii]])
+
+    ### if you like, place red stars over points that are POIs (just for funsies)
+    if mark_poi:
+        for ii, pp in enumerate(pred):
+            if poi[ii]:
+                plt.scatter(features[ii][0], features[ii][1], color="r", marker="*")
+    plt.xlabel(f1_name)
+    plt.ylabel(f2_name)
+    plt.savefig(name)
+    plt.show()
 
 ### Task 1: Select what features you'll use.
 ### features_list is a list of strings, each of which is a feature name.
@@ -61,8 +81,9 @@ for key in keys:
 # from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import SelectKBest
 from sklearn.cluster import KMeans
-clf = KMeans(n_clusters=5)    # Provided to give you a starting point. Try a varity of classifiers.
-
+clf = KMeans(n_clusters=5)
+pred = clf.fit_predict(features)
+# Draw(pred, features, labels, mark_poi=True, name="clusters_after_scaling.pdf", f1_name='salary', f2_name='bonus')
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall
 ### using our testing script.
 ### Because of the small size of the dataset, the script uses stratified
@@ -77,7 +98,11 @@ clf = KMeans(n_clusters=5)    # Provided to give you a starting point. Try a var
 #     print features_list_new
 
 #     test_classifier(clf, my_dataset, features_list_new)
-
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
+print 'accuracy: ', accuracy_score(labels, pred)
+print 'precision: ', precision_score(labels, pred, average='micro')
+print 'recall: ', recall_score(labels, pred, average='micro')
+print 'f1_score: ', f1_score(labels, pred, average='micro')
 
 test_classifier(clf, my_dataset, features_list)
 ### Dump your classifier, dataset, and features_list so
