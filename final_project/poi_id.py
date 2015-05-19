@@ -58,8 +58,7 @@ for key in my_dataset.keys():
     for feat in my_dataset[key].keys():
         if my_dataset[key][feat] == 'NaN':
             my_dataset[key][feat] = 0
-# print my_dataset['CAUSEY RICHARD A']
-# Draw(my_dataset, features_list, 1, 1)
+
 ### Extract features and labels from dataset for local testing
 data = featureFormat(my_dataset, features_list, sort_keys = True)
 labels, features = targetFeatureSplit(data)
