@@ -39,7 +39,7 @@ features_email = ['to_messages', 'from_poi_to_this_person', 'from_messages', 'fr
 'fraction_from_poi', 'fraction_to_poi','email_address']
 # features_list = ['poi','salary'] # You will need to use more features
 features_list = ['poi'] + features_financial + features_email[:-1]
-features_list = ['poi', 'salary', 'bonus', 'deferred_income']
+features_list = ['poi', 'bonus', 'total_stock_value', 'exercised_stock_options']
 ### Load the dictionary containing the dataset
 data_dict = pickle.load(open("final_project_dataset.pkl", "r") )
 for person in data_dict.keys():
