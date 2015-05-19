@@ -15,7 +15,7 @@ from tester import test_classifier, dump_classifier_and_data
 features_financial = ['salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'restricted_stock_deferred', 'deferred_income',
 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees']
 features_email = ['to_messages', 'from_poi_to_this_person', 'from_messages', 'from_this_person_to_poi','shared_receipt_with_poi',
-'fraction_from_poi', 'fraction_from_poi','email_address']
+'fraction_from_poi', 'fraction_to_poi','email_address']
 # features_list = ['poi','salary'] # You will need to use more features
 features_list = ['poi'] + features_financial + features_email[:-1]
 features_list = ['poi', 'salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options']
