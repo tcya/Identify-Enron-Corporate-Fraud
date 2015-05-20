@@ -13,14 +13,17 @@
 The Enron scandal, was one of the largest corporate fraud and audit failure cases in American history, the bankruptcy of Enron is both fascinating and uniquely well-documented.  More interestingly, its most lasting legacy, the Enron email corpus, involving thousands of emails, is still being widely studied by data scientists. In this project, I use email and financial data for 146 executives at Enron to identify persons of interest in the fraud case.  A person of interest (POI) is someone who was indicted for fraud, settled with the government, or testified in exchange for immunity.  This report documents the machine learning techniques used in building a POI identifier.
 \section{Preprocessing Data}
 The first step of data processing is examining the data for outliers or obvious mistakes.  There is one significant outlier, the `TOTAL' item. It is the sum of all other items so is much larger and has different meanings. As the result, I removed it from the dataset manually. Some other points, though seemingly to be outliers, correspond to real Enron characters so were left in.  More importantly, as people of interest, they are supposed to earn much more than others.
-Feature Selection and Scaling
+\section{Feature Selection and Scaling}
 Once the data was cleaned, the next step was to choose features to use.  This was done in the following way. First, I added two features, `fraction\_from\_poi' and `fraction\_to\_poi', which were discussed in the class. They correspond to the fraction of all emails to/from a person that were sent from/to a person of interest respectively. Then I focused my attention on numerical features, namely,
 ['salary', `deferral\_payments', `total\_payments', `loan\_advances', `bonus', `restricted\_stock\_deferred', `deferred\_income',
 `total\_stock\_value', `expenses', `exercised\_stock\_options', `other', `long\_term\_incentive', `restricted\_stock', `director\_fees', `to\_messages', `from\_poi\_to\_this\_person', `from\_messages', `from\_this\_person\_to\_poi',`shared\_receipt\_with\_poi',
 `fraction\_from\_poi', `fraction\_to\_poi'].
-At last, I used the function SelectKBest() to pick out different numbers of features, tried from one feature to all, and observed their performance. Three algorithms were employed. They were decision tree, Gaussian naive Bayesian and k-means clustering. The univariate feature selection was carried out for decision tree and Gaussian naive Bayesian. The results were summarized in `final\_project/DTtrials.txt' and `final\_project/GNBtrials.txt'. They showed that using the first three features, [`bonus', `total\_stock\_value', `exercised\_stock\_options'], gives good predictions in both algorithms. As the result, I didn't perform univariate feature selection again in k-means clustering, but use the same three features. The hypothesis behind this was that those involved in the scandal were mostly senior executives so they would likely have more income. In decision tree case, the feature importances were [ 0.46846758,  0.26746432,  0.2640681].
+At last, I used the function SelectKBest() to pick out different numbers of features, tried from one feature to all, and observed their performance.
+
+Three algorithms were employed. They were decision tree, Gaussian naive Bayesian and k-means clustering. The univariate feature selection was carried out for decision tree and Gaussian naive Bayesian. The results were summarized in `final\_project/DTtrials.txt' and `final\_project/GNBtrials.txt'. They showed that using the first three features, [`bonus', `total\_stock\_value', `exercised\_stock\_options'], gives good predictions in both algorithms. As the result, I didn't perform univariate feature selection again in k-means clustering, but use the same three features. The hypothesis behind this was that those involved in the scandal were mostly senior executives so they would likely have more income. In decision tree case, the feature importances were [ 0.46846758,  0.26746432,  0.2640681].
 The decision tree and Gaussian naive Bayesian classifiers don't require feature scaling but k-means clustering does, so in k-means clustering, the features chosen were scaled using function sklearn.preprocessing.scale().
 \section{Algorithm Selection and Tuning}
+Tuning an algorithm means trying different parameters to generate good predictions. Without intelligent choice of parameters, even a good algorithm can't reveal its power. For different classifiers, there are different parameters need to be played with.
 \begin{itemize}
 \item Decision Tree (checkout branch master to see)
 
@@ -50,7 +53,13 @@ After feature selection, there is no parameter for tuning in this classifier.
 This classifier was relatively slow so I didn't play too much with it. The parameter I tried was n\_clusters, which was supposed to be 2 because there were two type of people, POI and non-POI. However, I found that setting it to larger values would cheat the tester.py file provided to us. I'll discuss this later.
 \end{itemize}
 \section{Analysis Validation and Performance}
-For decision tree and Gaussian naive Bayesian, the tester.py provides a good way for validation, which used stratified shuffle split cross validation.  The number of re-shuffling \& splitting iterations was 1000. The precision and recall for all three classifiers are listed below in Table 2.
+After an algorithm is chosen, we need to show that it really works. First we need to train the algorithm, then test it. This process is called validation. For supervised learning, obviously the training data should differ from the test ones, otherwise it becomes tautology, in other words, the algorithm is over-fitted. Without correct validation, the algorithm can looked excellent in the dataset used, but turns out to be wrong when applied in other places. Validation is important for that it gives us confidence about algorithm.
+
+There are many ways to measure the performance of algorithm in validation, for example, accuracy, precision and recall. The Enron emails are very unbalanced data. There are 145 people in the dataset, 18 of them being POIs. It means even a nonsense classifier which identifies everyone as a non-POI would have $127/145=88\%$ accuracy. As the result, I relied on precision, recall and f1 score in validation.
+
+For decision tree and Gaussian naive Bayesian, the tester.py provides a good way for validation, which used stratified shuffle split cross validation.  The number of re-shuffling \& splitting iterations was 1000. The re-shuffling was used rather than common train\_test\_split because of the small size of the data. With only 145 people involved, it's a waste if the data is simply split into two parts. Splitting it into many random small pieces for cross-validation can squeeze out more information.
+
+The precision and recall for all three classifiers are listed below in Table 2.
 
 \begin{table}[h]
 \caption{Precision and recall scores of different classifiers}
@@ -69,7 +78,11 @@ k-means clustering(n\_clusters=2) & 0.27400 & 0.26400 \\
 Both the decision tree and Gaussian naive Bayesian had precision and recall greater than 0.3.
 \section{Discussion and Conclusions}
 The precision can be interpreted as the likelihood that a person who is identified as a POI is actually a true POI; for instance, in decision tree classifier, precision being 0.38 means that using this identifier to flag POI's would result in 62\% of the positive flags being false alarms.  Recall measures how likely it is that, given that there's a POI in the test set, this identifier would flag him or her; still taking the decision tree as an example, 37\% of the time it would catch that person, and 63\% of the time it wouldn't.
+
 While these numbers are reasonably good, there is space for improvement. The features usable for predictions can be roughly split into two categories, financial features and email features. In the univariate feature selection, the features chosen first were mostly financial features. It is quite reasonable given that earnings usually have larger variance (think this, which way is easier to distinguish a CEO from a clerk, looking at their incomes or number of emails?). However, this also means the information in texts was not fully used. It's possible to make improvements by digging into the email texts, using Tfidf for example.
+
+In the univariate feature selection for decision tree, using only the first feature, `exercised\_stock\_options', gives a very good result, with $precision = 0.58706$ and $recall = 0.57150$. I didn't choose it because I thought it was too good for using single feature. Pure luck might be an important role here. It's more persuasive to employ several features in such a complex case.
+
 At last, a bug (or feature?) in tester.py was revealed when I played around with k-means clustering. When the default value, namely, n\_clusters=8, was used, the tester returned the precision = 0.91670  and recall = 0.94725. It's too good to believe. By plotting the clusters in Fig.1, we can see that the results are absolutely not that good.
 \begin{figure}[!h]
 \centering\includegraphics[width=4.3in]{clusters_after_scaling.pdf}
